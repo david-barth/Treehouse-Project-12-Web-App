@@ -1,0 +1,75 @@
+Project Engine: Ideas for usage in Project. 
+
+
+Considerations based on the example engine testing: 
+
+---> The subjects of the engine must be broad enough so that a large number of input vectors can be used during the training process. 
+
+---> The original idea was to use the marvel comics API in order to serve recommended comics based on a batching of tweets. 
+
+    ---> This would have been done using a potential geolocator api call on the twitter api side. 
+
+
+---> Some other possible API ideas: 
+
+    ---> A news recommender system which serves news based twitter content in the region:
+
+        ---> This can be done via the Guardian news API: 
+
+            ---> It is possible to use tags in an API endpoint. 
+
+            ---> The sections API can also be used in order to display content related to a section. 
+
+            ---> The JS client can be installed via the following link: https://github.com/PorterK/GuardianJSClient
+
+
+
+---> The main concept behind the app: 
+
+    ---> The idea is to use a geolocator endpoint or some modified twitter endpoint, which is programmatically supplied by the UI. 
+
+    ---> This will gather up the tweets, based on either user account tweet activity or based on a region's tweet activity. 
+
+    ---> The tweet batch (or batches) will be fed into the NN and the softmax results will be used to serve up a top 3 hierarchy that will be displayed onto the app's UI. 
+
+    ---> The information will be based on the either section or tag related content: 
+
+        ---> The label categories should exist within a big 'section' such as 'business' or 'finance'.  
+
+        ---> The actual labels should be very disinctly recognizable sub-categories for the main section?  
+
+
+
+
+---> Considerations for label ideas: 
+
+    ---> The labels should be sections in the guardian API in order to properly allow for distinct 'chunks' of vocabulary in the dictionary of the NN. 
+
+    ---> Sections can include: 
+
+        ---> World Affairs
+
+        ---> Science and Technology
+
+        ---> Business 
+
+        ---> Football
+
+        ---> Environment (non science).
+
+    ---> Therefore, there will be 5 labels that will be used in a news multi-classifier recommender NN. 
+
+
+---> The strategy for this will be: 
+
+    ---> Grow a dictionary corpus of sufficient size over the course of 3-5 days. 
+
+    ---> The dictionary shall be truncated at 1500-2000 characters. 
+
+    ---> Then training / testing set data shall be gathered for training for 3-5 days.  
+
+    ---> Training shall occur in order to obtain a proper weights folder (with incremental training being done as needed). 
+
+    ---> The frontend shall then be conceptualized and developed in accordance with the recommender requirements. 
+
+    ---> The backend shall be developed according to the frontend.  

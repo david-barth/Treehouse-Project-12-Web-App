@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"tweetData.maps"}],"uuid":"f876773eca764379aaa850acc116ab6e"}

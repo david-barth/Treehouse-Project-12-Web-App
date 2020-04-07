@@ -1,0 +1,79 @@
+Planning for the backend and interaction with the frontend: 
+
+---> The Express backend will form the processing back bone of the app. 
+
+---> Here, the necessary preprocessing shall be integrated into the routing middleware. 
+
+---> Calls to the Guardian API and the Twitter API shall also be made. 
+
+---> The machine learning engine shall also be integrated into the routing middleware in order to properly power the app. 
+
+
+
+Planning based on the frontend Structure: 
+
+---> There are two buttons within the React Structure: 
+
+     1. "Get Tweets" Button ---> The following functionalities need to be installed for this: 
+
+        A. Twit Tweet Get 
+
+        B. Vectorizer Preprocessing
+
+        C. Bunching and Vectorizing of Tweets. 
+
+        D. Storage of Tweets into DB. 
+
+        ---> These are the minimum steps that must be installed into this route.  
+
+
+     2. "Predict News" Button ---> The following functionalities need to be installed into this route: 
+
+
+        A. Feeding the vector into the NN. 
+
+        B. Process NN Output and GET News Articles. 
+
+        C. Programmatically display articles on the frontend as part of response. 
+
+
+    ---> Some of the intermediate DB storage steps, defined during the training of the NN, should be removed from the coding of the processing functions. 
+
+    ---> The division of responsibilities is roughly even, allow for a roughly even processing time. 
+
+    ---> GET requests to APIs are handled from the Express end. 
+
+
+
+Precise Planning: 
+
+---> The first thing that needs to be done is consider how the form data shall be sent over to the backend interface: 
+
+    ---> The fetch API will contain the necessary programming needed in order to post form data to the backend. 
+
+
+---> With the connection being made to the backend, it is now possible to consider the first portion of the division of functionalities: 
+
+    ---> The form data is posted to the post route, where additional processing must take place.
+
+    ---> This processing includes the formation of a proper URL for the Twitter API tweet extraction to take place.  The information is taken off of the postData object. 
+
+        ---> In the case of geographical mode: An additional search will not to be performed with the twitter API to obtain the proper latitude and longitude coordinates. 
+
+    ---> The assembled URL is then placed into the Twitter API call in order to obtain the desired tweets. 
+
+    ---> Then vectorizer preprocessing takes place in order to clean up the tweets. 
+
+    ---> Cleaned up tweets can be stored into a new collection within the database. 
+
+    ---> This functionality can be repeated as many times as necessary in order to amalgamate tweets. 
+
+
+Planning for the NN Engine and Guardian API integration for getNews Route: 
+
+
+---> The following events need to be considered when constructing the neural net engine class: 
+
+    1. The data must be converted into a tensor correctly.  
+
+    2. The data must then be fed into the neural network.  

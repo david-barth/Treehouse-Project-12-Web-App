@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="app_Template.html" class="brand-logo">Tweet News Recommender</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="app_Template.html">About this app...</a></li>
+                <li><a href="tweet_Input.html">Detail your tweet selection!</a></li>
+                <li><a href="tweet_Stat.html">Tweet Statistics</a></li>
+                <li><a href="news_Display.html">Read your news</a></li>
+              </ul>
+            </div>
+          </nav>
+
+      
+          <!--Form Information-->
+
+          <div class="row">
+            <form class="col s12" action="tweet_Stat.html">
+
+              <!--Geo-mode selection section-->
+              <div id="section1">
+                <div class="row">
+                    <div class="col s12 m6">
+                      <div class="card blue darken-1">
+                        <div class="card-content white-text">
+                          <span class="card-title">Local or Global?</span>
+                          <p> Select whether you wish to gather tweets from around the world ("Global Mode") or 
+                            if you wish to gather tweets within a certain region ("Geographic Mode"). 
+                            All Geographic Mode searches require a location and will be made within a certain radius
+                            of that location. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-field col s6">
+                      <select>
+                        <option value="" disabled selected>Choose your mode</option>
+                        <option value="global">Global</option>
+                        <option value="geographical">Geographical</option>
+                      </select>
+                      <label>Mode Select:</label>
+                    </div>
+                  </div>
+
+                  <!--Geographical Mode Inputs-->
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="Type a location..." id="location" type="text" class="validate">
+                      <label for="location">Location</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="Specify a radius..." id="radius" type="text" class="validate">
+                      <label for="radius">Radius</label>
+                    </div>
+                    <div class="col s6 offset-s5">
+                        <a id="next-button" class="waves-effect waves-light btn-large">Next</a>
+                    </div>
+                  </div>
+              </div>
+
+              <!--Subject and Hashtag section-->
+              <div id="section2">           
+                <div class="row">
+                    <div class="col s12 m6">
+                      <div class="card blue darken-1">
+                        <div class="card-content white-text">
+                          <span class="card-title">Tweet Specifications:</span>
+                          <p>
+                            Now you specify the desired search subject of your tweet.  
+                            This is preferably a subject that is news worthy and related to "World News", "Science and Technology", "Business", "Football", or "Environment". 
+                            After, you may choose to further focus your search by adding in 2 desired words for Hashtag filtering. 
+                            This will allow you to search for tweets based on specific Hashtags. These are optional and you may ignore this. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="input-field col s6">
+                    <input placeholder="Enter tweet subject..." id="tweetSubject" type="text" class="validate">
+                    <label for="tweet_Subject">Tweet Subject</label>
+                  </div>        
+
+                  <div class="input-field col s6">
+                    <select>
+                      <option value="" disabled selected>Do you want to use hashtag filters?</option>
+                      <option value="yes">Yes, let's do it!</option>
+                      <option value="no">No, I'm good</option>
+                    </select>
+                    <label>Hashtag Filters</label>
+                  </div>          
+              </div>
+
+              <!--Inputs for toggling hashtag filtering-->
+              <div class="row">
+                  <div class="input-field col s12">
+                    <input placeholder="Enter hashtag here..." id="hashtag1" type="text" class="validate">
+                    <label for="hashtag1">Hashtag Item 1:</label>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input placeholder="Enter second hashtag here..." id="hashtag2" type="text" class="validate">
+                  <label for="hashtag2">Hashtag Item 2:</label>
+                </div>
+              </div>
+
+              <!--Submit Button-->
+              <div class="row">
+                <div class="col s6 offset-s5">
+                    <button id="send" class="btn-large waves-effect waves-light" type="submit" name="action">Get my Tweets!
+                      <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+          </form>
+
+     
+      <!--Initialization Script Tags-->
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+        });
+      </script>
+
+      <!--Form Manipulation Script Tags-->
+      <script type="text/javascript">
+        //1. Select elements and set display options:  
+        const section1 = document.getElementById('section1');
+        const section2 = document.getElementById('section2');  
+        const nextBtn = document.getElementById('next-button');
+        section1.style.display = 'block';
+        section2.style.display = 'none'; 
+
+        //2. Set event listeners on relevant places: 
+        nextBtn.addEventListener('click', function() {
+          section1.style.display = 'none'; 
+          section2.style.display = 'block';  
+        }); 
+      </script>
+
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    </body>
+  </html>

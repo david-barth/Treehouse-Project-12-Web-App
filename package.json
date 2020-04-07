@@ -1,0 +1,57 @@
+{
+  "name": "main",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "@tensorflow/tfjs-node": "1.2.3",
+    "axios": "^0.19.2",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "emojione": "^4.5.0",
+    "express": "^4.16.4",
+    "http-errors": "^1.6.3",
+    "jade": "~1.11.0",
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "natural": "^0.6.3",
+    "pug": "^2.0.4",
+    "simple-spellchecker": "^1.0.0",
+    "slang-translator": "0.0.4",
+    "twit": "^2.2.11",
+    "twit-promise": "^2.1.0",
+    "wink-lemmatizer": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
