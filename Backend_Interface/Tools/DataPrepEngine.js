@@ -16,7 +16,7 @@ const T = new Twit({
 //Setting up Mongoose Connection:
 
 
-mongoose.connect('mongodb://localhost/appDB'); 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/tweetrec'); 
 
 const db = mongoose.connection; 
 
