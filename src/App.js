@@ -18,10 +18,10 @@ import Stat from './Components/Stat_Components/Stat';
 import NewsDisplay from './Components/NewsDisplay_Components/NewsDisplay';  
 
 //Key Variables: 
-const initial = 'http://localhost:9000/tweetPost'
-const augment = 'http://localhost:9000/tweetAugment'
-const newSearch = 'http://localhost:9000/newSearch'
-
+const initial = process.env.MONGODB_URI + '/tweetPost' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/tweetPost';
+const augment = process.env.MONGODB_URI + '/tweetAugment' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/tweetAugment';
+const newSearch = process.env.MONGODB_URI + '/newSearch' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/newSearch';
+const getNews = process.env.MONGODB_URI + '/getNews' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/'
 
 
 //App Class Declaration: 
@@ -126,7 +126,7 @@ class App extends Component {
         this.renderBar();
 
         //Fetch news articles from backend and format from json: 
-        const response = await fetch('http://localhost:9000/getNews'); 
+        const response = await fetch(getNews); 
         const newsArticles = await response.json(); 
         
         if (newsArticles.code === 200) {
