@@ -96,7 +96,6 @@ const dbDelete = () => {
 
 //Tweet Post Route: 
 router.post('/tweetPost', function(req, res, next) {
-    console.log('hi')
     //Format POST data and perform operations to get tweets and convert to input vector: 
     const inputData = formatBody(req.body)
     const prepEngine = new DataPrepEngine(inputData);
@@ -132,6 +131,7 @@ router.post('/tweetAugment', function(req, res, next) {
 //New Search Route: 
 router.get('/newSearch', async (req, res, next) => {
   try {
+    console.log('hi')
     await dbDelete();
     res.json({code: 200}) 
   } catch (error) { 
