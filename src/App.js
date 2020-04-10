@@ -18,10 +18,10 @@ import Stat from './Components/Stat_Components/Stat';
 import NewsDisplay from './Components/NewsDisplay_Components/NewsDisplay';  
 
 //Key Variables: 
-const initial = '/tweetPost'
-const augment = '/tweetAugment'  
-const newSearch = '/newSearch'
-const getNews = '/getNews' 
+const initial = '/Backend_Interface/routes/index/tweetPost'
+const augment = '/Backend_Interface/routes/index/tweetAugment'  
+const newSearch = '/Backend_Interface/routes/index/newSearch'
+const getNews = '/Backend_Interface/routes/index/getNews' 
 
 
 //App Class Declaration: 
