@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="app_Template.html" class="brand-logo">Tweet News Recommender</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="app_Template.html">About this app...</a></li>
+                <li><a href="tweet_Input.html">Detail your tweet selection!</a></li>
+                <li><a href="tweet_Stat.html">Tweet Statistics</a></li>
+                <li><a href="news_Display.html">Read your news</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          
+        <div class="row">
+            <div class="col s3 blue lighten-4">
+                <!-- Grey navigation panel -->
+                <ul id="slide-out" class="sidenav blue lighten-4">
+                    <li><a href="#!"></a></li>
+                    <li><a class="waves-effect" href="app_Template.html">Intro</a></li>
+                    <li><a class="waves-effect" href="Machine_Learning.html">Machine Learning Powered</a></li>
+                    <li><a class="waves-effect" href="What_Happens.html">What Happens?</a></li>
+                    <li><a class="waves-effect" href="Interplay.html">An Interplay of Numbers and Words</a></li>
+                </ul>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><p>Intro</p><i class="material-icons">menu</i></a>
+            </div>
+          
+            
+            <div class="col s12 m7 blue lighten-3">
+                <h4 class="header">Machine Learning Powered</h4>
+                <div class="card horizontal blue lighten-1">
+                    <div class="card-image">
+                    <img src="https://databricks.com/wp-content/uploads/2019/02/neural1.jpg">
+                    </div>
+                    <div class="card-stacked">
+                    <div class="card-content">
+                        <p>This app is powered by a machine learning algorithm called a "Neural Network". 
+                           Modeled off of human neurons, neural networks take in batches of inputs through the "input layer". 
+                           This input data is modified through calculations carried out into 1 or more "hidden layers". 
+                           The data is then sent out in its final form as a prediction through the "output layer". 
+                           The prediction can be used either to guess a number or to generate a categorization for something. 
+                           In this app, the input data are batches of tweets and the output is a prediction for a category of news article. 
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          
+                    
+            
+            <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems);
+                });
+            </script>
+
+            <!--JavaScript at end of body for optimized loading-->
+            <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    </body>
+  </html>
