@@ -18,10 +18,10 @@ import Stat from './Components/Stat_Components/Stat';
 import NewsDisplay from './Components/NewsDisplay_Components/NewsDisplay';  
 
 //Key Variables: 
-const initial = process.env.MONGODB_URI + '/9000/tweetPost' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/tweetPost';
-const augment = process.env.MONGODB_URI + '/9000/tweetAugment' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/tweetAugment';
-const newSearch = process.env.MONGODB_URI + '/9000/newSearch' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/newSearch';
-const getNews = process.env.MONGODB_URI + '/9000/getNews' || 'mongodb://heroku_gf0fd0gr:lvh73fe36gmnkijiftnij492o3@ds359118.mlab.com:59118/heroku_gf0fd0gr/'
+const initial = process.env.MONGODB_URI + '/9000/tweetPost'; 
+const augment = process.env.MONGODB_URI + '/9000/tweetAugment';  
+const newSearch = process.env.MONGODB_URI + '/9000/newSearch';
+const getNews = process.env.MONGODB_URI + '/9000/getNews'; 
 
 
 //App Class Declaration: 
