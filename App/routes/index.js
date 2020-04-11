@@ -93,13 +93,6 @@ const dbDelete = () => {
  */
 
 
-//Root route for production build of React frontend: 
-router.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-
-
 
 //Tweet Post Route: 
 router.post('/tweetPost', function(req, res, next) {
