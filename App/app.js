@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
   });
 
 //Integrate other routes: 
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
 
 
 //Listen on port: 
