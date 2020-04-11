@@ -25,7 +25,7 @@ class NN_Engine {
         const inputTensor = tf.tensor2d(inputArray);
         const normalisedInput = this.normalise(inputTensor).tensor;
 
-        console.log(normalisedTensor.dtype); 
+        console.log(normalisedInput.dtype); 
 
         //Run prediction and model and process result to normal array: 
         const predictionTensor = await model.predict(normalisedInput); 
