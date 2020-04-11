@@ -22,7 +22,7 @@ app.use('/', indexRouter);
 
 
 //Listen on port: 
-app.listen(process.env.PORT || 9000);
+app.listen(9000);
 
 
 
