@@ -21,9 +21,9 @@ app.use('/', indexRouter);
 
 
 //Serve static react files if other requests not triggered: 
-app.get("*", (req, res) => {
+/*app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+});*/
 
 //Listen on port: 
 app.listen(9000);
