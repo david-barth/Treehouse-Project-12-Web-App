@@ -6,6 +6,9 @@ var cors = require("cors");
 var app = express();
 var indexRouter = require('./routes/index');
 
+//Set up views engine and integrate router: 
+app.use('/', express.static(path.join(__dirname, 'build')));
+
 
 //Set Up Other Dependencies: 
 app.use(cors());
@@ -14,19 +17,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
-//Set up views engine and integrate router: 
-//app.use('*', express.static(path.join(__dirname, 'build')));
-
-
-//Root route for production build of React frontend: 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
-  });
-
 //Integrate other routes: 
-//app.use('/', indexRouter);
-
+app.use('/', indexRouter);
 
 //Listen on port: 
 app.listen(9000);
@@ -34,3 +26,4 @@ app.listen(9000);
 
 
 
+//Continuation: Look up treehouse course. 
