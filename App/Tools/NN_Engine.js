@@ -1,5 +1,5 @@
 const vector = require('../models/vector');  
-const tf = require('../../node_modules/@tensorflow/tfjs-node'); 
+const tf = require('../node_modules/@tensorflow/tfjs-node'); 
 
 //Essential Variables: 
 const loadingKey = 'file://'+__dirname+'/Project_Engine/NN_Weights/model.json'; //Contains trained neural network parameter information.  

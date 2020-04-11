@@ -97,9 +97,7 @@ const dbDelete = () => {
 router.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-/**
- * Link backend express server to index file in 'build' folder. 
- */
+
 
 
 

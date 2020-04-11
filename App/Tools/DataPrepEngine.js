@@ -1,5 +1,5 @@
 //Tool Dependencies: 
-const Twit = require('../../node_modules/twit-promise');
+const Twit = require('../node_modules/twit-promise');
 const mongoose = require('mongoose');
 const DataProcessor = require('./dataPreprocesser').Preprocessor; 
 
@@ -16,7 +16,7 @@ const T = new Twit({
 //Setting up Mongoose Connection:
 
 
-mongoose.connect(process.env.MONGODB_URI); 
+mongoose.connect('mongodb://localhost/appDB'); 
 
 const db = mongoose.connection; 
 
