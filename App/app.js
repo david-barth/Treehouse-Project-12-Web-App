@@ -20,10 +20,6 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 
 
-//Serve static react files if other requests not triggered: 
-/*app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});*/
 
 //Listen on port: 
 app.listen(process.env.PORT || 9000);
