@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //Integrate other routes: 
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
 
 
 //Serve static react files if other requests not triggered: 
