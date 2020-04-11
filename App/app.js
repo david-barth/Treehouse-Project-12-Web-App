@@ -20,9 +20,9 @@ app.use('*', express.static(path.join(__dirname, 'build')));
 
 
 //Root route for production build of React frontend: 
-/*app.get('/', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });*/
+  });
 
 //Integrate other routes: 
 app.use('/', indexRouter);
