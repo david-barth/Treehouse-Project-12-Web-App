@@ -18,11 +18,15 @@ class NN_Engine {
         
         //Load tweets from DB and isolate input array:  
         const loadedData = await vector.find({label: 'Prediction'});
+        console.log(loadedData[0])
+
         const inputArray = [loadedData[0].vector];
 
         //Convert input array to tensor and normalise: 
         const inputTensor = tf.tensor2d(inputArray);
         const normalisedInput = this.normalise(inputTensor).tensor;
+
+        inputTensor.print(); 
 
         //Run prediction and model and process result to normal array: 
         const predictionTensor = await model.predict(normalisedInput); 
