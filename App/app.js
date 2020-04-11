@@ -9,10 +9,6 @@ var indexRouter = require('./routes/index');
 //Set up views engine and integrate router: 
 app.use(express.static(path.join(__dirname, 'build')));
 
-
-
-
-
 //Set Up Other Dependencies: 
 app.use(cors());
 app.use(logger('dev'));
@@ -21,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //Integrate other routes: 
-//app.use('/', indexRouter);
+app.use('/', indexRouter);
 
 
 //Serve static react files if other requests not triggered: 
