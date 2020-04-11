@@ -18,9 +18,10 @@ import Stat from './Components/Stat_Components/Stat';
 import NewsDisplay from './Components/NewsDisplay_Components/NewsDisplay';  
 
 //Key Variables: 
-const initial = 'http://localhost:9000/tweetPost'
-const augment = 'http://localhost:9000/tweetAugment'
-const newSearch = 'http://localhost:9000/newSearch'
+const initial = '/tweetPost';
+const augment = '/tweetAugment';
+const newSearch = '/newSearch';
+const getNewsURL = '/getNews';
 
 
 
@@ -126,7 +127,7 @@ class App extends Component {
         this.renderBar();
 
         //Fetch news articles from backend and format from json: 
-        const response = await fetch('http://localhost:9000/getNews'); 
+        const response = await fetch(getNewsURL); 
         const newsArticles = await response.json(); 
         
         if (newsArticles.code === 200) {
