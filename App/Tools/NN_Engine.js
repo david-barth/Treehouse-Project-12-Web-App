@@ -20,12 +20,9 @@ class NN_Engine {
         const loadedData = await vector.find({label: 'Prediction'});
         const inputArray = [loadedData[0].vector];
 
-        model.summary();
         //Convert input array to tensor and normalise: 
         const inputTensor = tf.tensor2d(inputArray);
         const normalisedInput = this.normalise(inputTensor).tensor;
-
-        console.log(normalisedInput.dtype); 
 
         //Run prediction and model and process result to normal array: 
         const predictionTensor = await model.predict(normalisedInput); 
