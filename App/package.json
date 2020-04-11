@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run start-js arg\" \"node Backend_Interface/app.js arg\"",
-    "start-js": "react-scripts start",
+    "start": "node Backend_Interface/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
