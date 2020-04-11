@@ -23,13 +23,11 @@ class NN_Engine {
         //Convert input array to tensor and normalise: 
         const inputTensor = tf.tensor2d(inputArray);
         const normalisedInput = this.normalise(inputTensor).tensor;
-
+        normalisedInput.print(); 
 
         //Run prediction and model and process result to normal array: 
         const predictionTensor = await model.predict(normalisedInput); 
-        predictionTensor.print()
         const prediction = predictionTensor.dataSync(); 
-        console.log(prediction);
 
         //Convert result to yield news prediction: 
         const result = this.categorize(prediction);
