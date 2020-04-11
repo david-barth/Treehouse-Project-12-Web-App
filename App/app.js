@@ -7,7 +7,7 @@ var app = express();
 var indexRouter = require('./routes/index');
 
 //Set up views engine and integrate router: 
-app.use('/', express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 
 
