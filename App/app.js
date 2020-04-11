@@ -10,6 +10,9 @@ var indexRouter = require('./routes/index');
 app.use('/', express.static(path.join(__dirname, 'build')));
 
 
+
+
+
 //Set Up Other Dependencies: 
 app.use(cors());
 app.use(logger('dev'));
@@ -19,6 +22,12 @@ app.use(cookieParser());
 
 //Integrate other routes: 
 app.use('/', indexRouter);
+
+
+//Serve static react files if other requests not triggered: 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 //Listen on port: 
 app.listen(9000);
