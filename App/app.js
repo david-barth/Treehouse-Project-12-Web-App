@@ -16,12 +16,12 @@ app.use(cookieParser());
 
 
 //Set up views engine and integrate router: 
-app.use('*', express.static(path.join(__dirname, 'build')));
+//app.use('*', express.static(path.join(__dirname, 'build')));
 
 
 //Root route for production build of React frontend: 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
   });
 
 //Integrate other routes: 
