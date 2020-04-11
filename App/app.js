@@ -7,7 +7,7 @@ var app = express();
 var indexRouter = require('./routes/index');
 
 //Set up views engine and integrate router: 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use('/', express.static(path.join(__dirname, 'build')));
 
 //Set Up Other Dependencies: 
 app.use(cors());
@@ -26,7 +26,7 @@ app.use('/', indexRouter);
 });*/
 
 //Listen on port: 
-app.listen(9000);
+app.listen(process.env.PORT || 9000);
 
 
 
